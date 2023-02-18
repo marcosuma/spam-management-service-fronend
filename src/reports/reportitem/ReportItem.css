@@ -1,0 +1,35 @@
+.entry {
+    padding-left: 8px;
+    border: #333 1px solid;
+    margin-bottom: 1px;
+    width: 50%;
+    height: 120px;
+
+}
+
+.entry-column-1 {
+    float: left;
+    padding-right: 12px;
+    width: 30%;
+    height: 100%;
+}
+
+.entry-column-2 {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.entry-column-3 {
+    float: right;
+    padding-right: 30px;
+    width: 20%;
+    height: 100%;
+}
+
+.entry-row {
+    padding: 4px;
+    flex-direction: row;
+    align-items: left;
+    height: 40%
+}

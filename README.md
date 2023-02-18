@@ -1,10 +1,21 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend of the `Spam reporting management service (SRMS)`. For more information about the whole service, please refer to the `backend` project.
 
-## Available Scripts
+The frontend component of SRMS has been written using **Javascript** and **React**.
+The UI is fairly simple and it follows the guidelines provided in the [official documentation](https://github.com/morkro/coding-challenge).
 
-In the project directory, you can run:
+![homepage](img/screenshot.png)
+
+# Project structure
+
+The project is small and has very few dependencies (besides react of course).
+
+The main React component is `App.js` which contains the homepage structure. That is followed by `Reports.js` which represents the entire table. Each report is made of `ReportItem.js` (rows) and the `EntryButton.js` is the react component that is used to show the "Block" and "Resolve" buttons.
+
+# How to run
+
+This project can simply be launched with `npm start` (doing that will run the project in development mode).
 
 ### `npm start`
 
@@ -29,42 +40,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Potential improvements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+These improvements are to be meant for real case scenarios.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `Internationalization`: text is written in English and hardcoded in the react components. In real case scenarios where we have customers from all over the world we should use i18n framework to support multiple languages
+- `Search functionality`: a nice add-on feature for this UI would be the possibility of searching across the different reports.
+- `Pagination`: when there are too many results, pagination must be implemented. For the sake of this task I skipped pagination but in real cases it would be necessary considering that reports could grow infinitely.
+- `Use TypeScript` (Requirement was clearly expressed by the recruiter to be Javascript): I explained this reason in the `README.md` file of the `backend` project.
+- `Testing`: Similar to the `backend` project I added a basic test coverage to highligh the importance of testing. For production situtations we should add more tests, including UI screenshot testings.
